@@ -30,7 +30,6 @@ public class TitleConfig {
             reader.close();
         } catch (Exception e) {
             System.err.println("Failed to load config!");
-            e.printStackTrace();
         }
     }
 
@@ -45,7 +44,6 @@ public class TitleConfig {
             writer.close();
         } catch (Exception e) {
             System.err.println("Failed to save config!");
-            e.printStackTrace();
         }
     }
 }
