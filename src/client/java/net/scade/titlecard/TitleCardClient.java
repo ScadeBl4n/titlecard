@@ -56,7 +56,7 @@ public class TitleCardClient implements ClientModInitializer {
         String username = client.getSession().getUsername();
         ServerInfo serverEntry = MinecraftClient.getInstance().getCurrentServerEntry();
         String mcName = "Minecraft";
-        String version = SharedConstants.getGameVersion().getName();
+        String version = SharedConstants.getGameVersion().name();
         String state = "";
         String stateWithDash = "";
         String fps = String.valueOf(client.getCurrentFps());
@@ -77,7 +77,7 @@ public class TitleCardClient implements ClientModInitializer {
         if (clientPlayNetworkHandler != null && clientPlayNetworkHandler.getConnection().isOpen()) {
             if (client.isInSingleplayer()) {
                 state = I18n.translate("title.singleplayer");
-            } else if (client.isConnectedToRealms()) {
+            } else if (client.getCurrentServerEntry().isRealm()) {
                 state = I18n.translate("title.multiplayer.realms");
             } else if (client.getCurrentServerEntry() == null || !client.getCurrentServerEntry().isLocal()) {
                 state = I18n.translate("title.multiplayer.other");
