@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "titlecard",
+	"version": "${version}",
+	"name": "TitleCard",
+	"description": "Heavily configurable mod to customize the minecraft window title!",
+	"authors": [
+		"Scade/Bl4n"
+	],
+	"license": "SBL-1.0",
+	"icon": "assets/titlecard/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"net.scade.titlecard.TitleCard"
+		],
+		"client": [
+			"net.scade.titlecard.TitleCardClient"
+		],
+        "modmenu": [
+          "net.scade.titlecard.Config.ModMenuIntegration"
+        ]
+	},
+	"mixins": [
+		"titlecard.mixins.json",
+		{
+			"config": "titlecard.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

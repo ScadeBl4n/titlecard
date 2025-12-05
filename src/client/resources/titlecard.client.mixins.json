@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "net.scade.titlecard.mixin.client",
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+      "MinecraftClientMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
